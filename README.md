@@ -12,14 +12,18 @@ Requires Docker installed.
   
 This builds the distro, using distro template. 
 
-    /run.sh  
+    ./run.sh  (menu driven)
     ./run.sh [arm64/riscv64] [distro dir]
 
-Your complete image will be in the `images` directory.  
   
 #### ./makeTar.sh  
   
-Builds tar file from RootFS.   This is run automatically from run.sh
+Builds tar file from `/rootfs`.   This is run automatically from run.sh, and
+not normally requied.
 
-    ./makeTar.sh  
     ./makeTar.sh [rootfs dir]
+
+#### Output
+
+`/rootfs` is a working directory
+`<distro>yyy-mm-dd.tar.gz` will be created when you enter root password.
