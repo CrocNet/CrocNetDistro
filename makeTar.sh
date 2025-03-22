@@ -28,7 +28,7 @@ fi
 # Get current date in yyyy-mm-dd format
 DATE=$(date +%Y-%m-%d)
 
-FILE_NAME="${DISTRO_DIR:-distro}-${DATE}.tar.gz"
+FILE_NAME="${DISTRO_DIR:-distro}-${ARCH}-${DATE}.tar.gz"
 
 # Initialize counter
 COUNT=0
@@ -36,7 +36,7 @@ COUNT=0
 # Check for existing files and increment counter if needed
 while [ -f "$FILE_NAME" ]; do
     COUNT=$((COUNT + 1))
-    FILE_NAME="${DISTRO_DIR}-${DATE}-${COUNT}.tar.gz"
+    FILE_NAME="${DISTRO_DIR}-${ARCH}-${DATE}-${COUNT}.tar.gz"
 done
 
 # Create the tar file
