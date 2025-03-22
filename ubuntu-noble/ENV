@@ -1,0 +1,5 @@
+export DISTRO=noble
+export DISTRO_URL=http://ports.ubuntu.com/ubuntu-ports
+
+[ -n "${DISTRO_HOSTNAME+set}" ] || export DISTRO_HOSTNAME="milkv-ubuntu"
+[ -n "${ROOTPW+set}" ] || export ROOTPW="milkv"
