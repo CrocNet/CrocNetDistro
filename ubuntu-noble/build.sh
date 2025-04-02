@@ -38,5 +38,10 @@ echo "========== EXIT CHROOT =========="
 
 umount $ROOTFS/proc
 rm $ROOTFS/bootstrap.sh
-cp -rf $DISTRO_DIR/etc $ROOTFS/.
 
+cp -rfv $DISTRO_DIR/etc $ROOTFS/.
+
+# copy modifers for device
+cp -v $DISTRO_DIR/kernel.conf $ROOTFS/.
+
+echo "exit build.sh"

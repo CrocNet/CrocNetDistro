@@ -1,0 +1,5 @@
+export DISTRO=sid
+export DISTRO_URL=http://deb.debian.org/debian/
+
+[ -n "${DISTRO_HOSTNAME+set}" ] || export DISTRO_HOSTNAME="milkv-debian"
+[ -n "${ROOTPW+set}" ] || export ROOTPW="milkv"
